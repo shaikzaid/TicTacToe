@@ -20,6 +20,7 @@ public class Game {
  private  List<Move> moves;
  private List<Board> boardStates;
  private WinningStrategy winningStrategy;
+ private int noOfSymbol;
 
  private Game(Board currentBoard, List<Player> players, WinningStrategy winningStrategy) {
   this.currentBoard = currentBoard;
@@ -28,7 +29,81 @@ public class Game {
   this.moves = new ArrayList<Move>();
   this.boardStates = new ArrayList<Board>();
   this.winningStrategy = winningStrategy;
+  this.noOfSymbol=0;
  }
+
+ public int getNoOfSymbol() {
+  return noOfSymbol;
+ }
+
+ public void setNoOfSymbol(int noOfSymbol) {
+  this.noOfSymbol = noOfSymbol;
+ }
+
+ public Board getCurrentBoard() {
+  return currentBoard;
+ }
+
+ public void setCurrentBoard(Board currentBoard) {
+  this.currentBoard = currentBoard;
+ }
+
+ public List<Player> getPlayers() {
+  return players;
+ }
+
+ public void setPlayers(List<Player> players) {
+  this.players = players;
+ }
+
+ public Player getCurrentplayer() {
+  return currentplayer;
+ }
+
+ public void setCurrentplayer(Player currentplayer) {
+  this.currentplayer = currentplayer;
+ }
+
+ public GameStatus getGameStatus() {
+  return gameStatus;
+ }
+
+ public void setGameStatus(GameStatus gameStatus) {
+  this.gameStatus = gameStatus;
+ }
+
+ public Player getWinner() {
+  return winner;
+ }
+
+ public void setWinner(Player winner) {
+  this.winner = winner;
+ }
+
+ public List<Move> getMoves() {
+  return moves;
+ }
+
+ public void setMoves(List<Move> moves) {
+  this.moves = moves;
+ }
+
+ public List<Board> getBoardStates() {
+  return boardStates;
+ }
+
+ public void setBoardStates(List<Board> boardStates) {
+  this.boardStates = boardStates;
+ }
+
+ public WinningStrategy getWinningStrategy() {
+  return winningStrategy;
+ }
+
+ public void setWinningStrategy(WinningStrategy winningStrategy) {
+  this.winningStrategy = winningStrategy;
+ }
+
 
  public static Builder builder(){    ///builder method  this is BUilder Module
   return new Builder();

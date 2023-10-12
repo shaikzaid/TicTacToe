@@ -15,9 +15,9 @@ public class Cell {
 
     public void display(){
         if(player == null){
-            System.out.println("|   | "+player.getSymbol()+" ");
+            System.out.print(" |   | ");
         } else {
-            System.out.print("|"+player.getSymbol()+ "|");
+            System.out.print("| "+player.getSymbol()+ " |");
         }
     }
 

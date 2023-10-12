@@ -3,7 +3,7 @@ package TicTacToe.Service.BotPlayingStrategy;
 import TicTacToe.BotplayingStrategy;
 
 public class BotPlayingStrategyFractory {
-    public BotplayingStrategy getBotPalyingStrategy(){
+    public static BotplayingStrategy getBotPalyingStrategy(){
         return new RandomBotPlayingStrategy();
     }
 }
